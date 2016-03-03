@@ -41,7 +41,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            {test: /\.js?$/, loader: 'babel?presets[]=es2015&plugins[]=transform-runtime'}
+            {test: /\.js?$/, loader: 'babel?presets[]=es2015&plugins[]=transform-runtime', exclude: /node_modules/}
         ],
         noParse: []
     },
