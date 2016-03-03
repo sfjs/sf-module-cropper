@@ -32,7 +32,7 @@ Crop.prototype._construct = function (sf, node, options) {
         parser = new DOMParser();
 
     if (options) {//if we pass options extend all options by passed options
-        this.options = sf.tools.extend(this.options, options);
+        this.options = Object.assign(this.options, options);
     }
 
     if (typeof this.options.info == "string")
