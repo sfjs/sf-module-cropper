@@ -474,7 +474,7 @@ Crop.prototype.handleFileSelect = function (file) {
                 name: encodeURIComponent(theFile.name ? theFile.name : that.options.ajaximage.replace(/^.*[\\\/]/, '')),
                 base64: e.target.result
             };
-            if (that.els.filenameContainer) that.els.filenameContainer.innerText = that.file.name;
+            if (that.els.filenameContainer) that.els.filenameContainer.innerHTML = that.file.name;
             that.img = new Image();
             that.img.src = that.file.base64;
             that.img.onload = function () {
